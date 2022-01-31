@@ -26,17 +26,17 @@ class Matrix:
         for row in range(len(matrix)):
             for col in range(len(matrix[0])):
                 if (row < 0 or col < 0 or row > len(matrix) - 1 or col > len(matrix[0]) - 1 or matrix[row][col] == 0):
-                    return 0
+                    nr_gr += 0
                 elif (row + 1 < 0 or col < 0 or row + 1 > len(matrix) - 1 or col > len(matrix[0]) - 1 or matrix[row + 1][col] == 0):
-                    return 0
+                    nr_gr += 0
                 elif (row - 1 < 0 or col < 0 or row - 1 > len(matrix) - 1 or col > len(matrix[0]) - 1 or matrix[row - 1][col] == 0):
-                    return 0
+                    nr_gr += 0
                 elif (row < 0 or col + 1 < 0 or row > len(matrix) - 1 or col + 1 > len(matrix[0]) - 1 or matrix[row][col + 1] == 0):
-                    return 0
+                    nr_gr += 0
                 elif (row < 0 or col - 1 < 0 or row > len(matrix) - 1 or col - 1 > len(matrix[0]) - 1 or matrix[row][col - 1] == 0):
-                    return 0
-                elif matrix[row][col] == 1:
-                    nr_gr += 1
+                    nr_gr += 0
+                #elif matrix[row][col] == 1:
+                #    nr_gr += 1
                 else:
                     nr_gr += 1
         return nr_gr
